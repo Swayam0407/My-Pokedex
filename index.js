@@ -1,15 +1,16 @@
 const express = require("express");
 const axios = require('axios');
 const app = express();
+const path = require("path");
 
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", function(req,res){
     res.sendFile(__dirname+"/public/index.html");
 })
 
-app.get("/get-pokemon", async function (req, res) {
+app.get("/api/get-pokemon", async function (req, res) {
   const pokemonPromises = [];
   const number = parseInt(req.query.number);
   const category = req.query.category;
@@ -42,8 +43,8 @@ catch(error){
 
 });
 
-app.listen(3000,function(req,res){
-    console.log('Server running on port 3000...');
-})
-
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 

@@ -259,7 +259,7 @@
     <h2>Discover your favorite Pokémon!</h2>
     <img class="pokemon-image" src="./pok4.png" alt="Pikachu"> 
 
-    <form action="/get-pokemon" method="get" id="pokemonForm">
+    <form action="/api/get-pokemon" method="get" id="pokemonForm">
         <label for="number">Number of Pokémons:</label>
         <input type="number" name="number" min="1" id="number" required>
         <label for="category">Category:</label>
@@ -304,7 +304,7 @@ document.getElementById('pokemonForm').addEventListener('submit', async function
     const number = document.getElementById('number').value;
     const category = document.getElementById('category').value;
 
-    const response = await fetch(`/get-pokemon?number=${number}&category=${category}`);
+    const response = await fetch(`/api/get-pokemon?number=${number}&category=${category}`);
     const pokemons = await response.json();
 
     const pokemonContainer = document.getElementById('pokemonContainer');

@@ -5,7 +5,7 @@ const path = require("path");
 const cors = require("cors");
 
 const corsOptions = {
-  origin: "https://my-pokedex-kkthy3xtf-swayam0407s-projects.vercel.app",
+  origin: '*',
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type"],
 };

@@ -3,7 +3,13 @@ const axios = require('axios');
 const app = express();
 const path = require("path");
 const cors = require("cors");
-app.use(cors());
+const corsOptions = {
+  origin: "https://my-pokedex-ashy-eight.vercel.app", 
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type"],
+};
+
+app.use(cors(corsOptions));
 
 app.get("/", function(req,res){
   res.send("Running!");

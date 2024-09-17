@@ -3,11 +3,13 @@ const axios = require('axios');
 const app = express();
 const path = require("path");
 const cors = require("cors");
+
 const corsOptions = {
-  origin: "https://my-pokedex-kkthy3xtf-swayam0407s-projects.vercel.app/",
+  origin: "https://my-pokedex-kkthy3xtf-swayam0407s-projects.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type"],
 };
+
 
 app.use(cors(corsOptions));
 

@@ -47,6 +47,7 @@ Through this project, I learned:
 ## 🛠️ Setup and Installation
 
 1. Clone this repository.
+
 2. Setup server
    ```bash
    cd server
@@ -67,5 +68,8 @@ Through this project, I learned:
 👉https://my-pokedex-ashy-eight.vercel.app/👈
 
 node-server: https://my-pokedex-zm54.onrender.com/
+
+## Credits
+API:  [PokeAPI](https://pokeapi.co/) 
 
 

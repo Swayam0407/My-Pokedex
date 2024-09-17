@@ -2,12 +2,11 @@ const express = require("express");
 const axios = require('axios');
 const app = express();
 const path = require("path");
-
-
-app.use(express.static(path.join(__dirname, "public")));
+const cors = require("cors");
+app.use(cors());
 
 app.get("/", function(req,res){
-    res.sendFile(__dirname+"/public/index.html");
+  res.send("Running!");
 })
 
 app.get("/api/get-pokemon", async function (req, res) {

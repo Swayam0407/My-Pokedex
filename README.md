@@ -1,6 +1,6 @@
 # Pokémon Finder
 
-A dynamic web application designed to display Pokémon cards based on the input for the number of cards and type of Pokémon.This project uses the PokeAPI to fetch real-time data and presents it in a visually appealing, fully responsive design.
+A web application designed to display Pokémon cards based on the input for the number of cards and type of Pokémon.This project uses the PokeAPI to fetch real-time data and presents it in a visually appealing, fully responsive design.
 
 ## 🌟 Features
 
